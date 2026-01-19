@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>みんなの保健室</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">みんなの保健室</a>
+
+      <!-- 三本線ボタン -->
+      <button class="menu-btn" id="menuBtn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- メニュー -->
+  <div class="menu-overlay" id="menuOverlay" hidden></div>
+
+  <nav class="menu-drawer" id="menuDrawer" hidden>
+    <div class="menu-head">
+      <p class="menu-title">メニュー</p>
+      <button class="menu-close" id="menuClose" aria-label="メニューを閉じる">×</button>
+    </div>
+
+    <a class="menu-item" href="#about">みんなの保健室について</a>
+    <a class="menu-item" href="#tools">使うツール</a>
+    <a class="menu-item" href="#flow">進め方</a>
+    <a class="menu-item" href="#contents">ストレス教育コンテンツ</a>
+    <a class="menu-item" href="#contact">運営・連絡</a>
+  </nav>
+
+  <main class="page" id="top">
+
+    <!-- ヒーロー -->
+    <section class="hero">
+      <h1>みんなの保健室</h1>
+      <p class="lead">
+        このサイトは、卒業研究「AI×ストレス教育」を追求するためのまとめページです。
+        学生が日常的に使っているツールを活用して、ストレスへの理解やセルフケアを
+        “続けやすく”する仕組みを検討しています。
+      </p>
+    </section>
+
+    <!-- About -->
+    <section class="panel" id="about">
+      <h2>みんなの保健室について</h2>
+
+      <div class="info">
+        <h3>研究目的</h3>
+        <p>ストレス教育をもっと身近にする支援の形を整理し、実装案として提案すること。</p>
+      </div>
+
+      <div class="info">
+        <h3>対象</h3>
+        <p>主に学生</p>
+      </div>
+
+      <div class="info">
+        <h3>倫理配慮</h3>
+        <p>個人が特定される情報は掲載せず、緊急性が高いと判断した場合は専門窓口の利用を案内します。</p>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="panel" id="tools">
+      <h2>使うツール</h2>
+
+      <p class="sublead">
+        学生が普段いる場所に、自然に“学び”と“整える行動”がつながる導線を作ります。
+      </p>
+
+      <!-- ★ ぜんぶリンク化（LINE / Instagram / フォーム） -->
+      <div class="chips">
+        <a class="chip chip-link"
+           href="https://lin.ee/5XzU5Y2"
+           target="_blank"
+           rel="noopener">
+           LINE（相談Bot）
+        </a>
+
+        <a class="chip chip-link"
+           href="https://www.instagram.com/trend_loots.1?igsh=MXFrZDA1OGtjdXdheQ%3D%3D&utm_source=qr"
+           target="_blank"
+           rel="noopener">
+           Instagram（情報発信）
+        </a>
+
+        <a class="chip chip-link"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSfnoBbTZtkOgGLmPBrHNR88Qp6wYPl-VNmUcsnzbNqjWTnjWQ/viewform?usp=ヘッダー"
+           target="_blank"
+           rel="noopener">
+           フォーム（お問い合わせ）
+        </a>
+
+        <span class="chip">Web（まとめ）</span>
+      </div>
+    </section>
+
+    <!-- Flow -->
+    <section class="panel soft-panel" id="flow">
+      <h2>システムのポイント</h2>
+
+      <div class="flow-grid">
+        <div class="flow-card">
+          <div class="flow-badge">知る</div>
+          <p class="flow-text">ストレスの仕組みや心と体のサインを、やさしく理解する。</p>
+        </div>
+
+        <div class="flow-card">
+          <div class="flow-badge">試す</div>
+          <p class="flow-text">呼吸や休憩など、すぐできることを小さくやってみる。</p>
+        </div>
+
+        <div class="flow-card">
+          <div class="flow-badge">続ける</div>
+          <p class="flow-text">日常ツールで、無理なく習慣につなげる。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contents -->
+    <section class="panel" id="contents">
+      <h2>ストレス教育コンテンツ</h2>
+
+      <div class="cards">
+        <a class="card" href="article1.html">
+          <h3>ストレスとは？</h3>
+          <p>基本の考え方を整理します。</p>
+        </a>
+
+        <a class="card" href="article2.html">
+          <h3>AIでできる支援</h3>
+          <p>続けやすさを作る工夫。</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="panel" id="contact">
+      <h2>運営・連絡</h2>
+      <p class="contact">静岡大学 グローバル共創科学部 辻桃佳
+
+tsuji.momoka.23@shizuoka.ac.jp</p>
+    </section>
+
+    <footer class="footer">
+      <p>© みんなの保健室｜卒業研究</p>
+    </footer>
+
+  </main>
+
+  <!-- メニュー開閉JS -->
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const drawer = document.getElementById('menuDrawer');
+    const overlay = document.getElementById('menuOverlay');
+    const closeBtn = document.getElementById('menuClose');
+
+    function openMenu() {
+      drawer.hidden = false;
+      overlay.hidden = false;
+      drawer.classList.add('open');
+      overlay.classList.add('show');
+      btn.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('no-scroll');
+    }
+
+    function closeMenu() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('show');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('no-scroll');
+      setTimeout(() => { drawer.hidden = true; overlay.hidden = true; }, 180);
+    }
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      expanded ? closeMenu() : openMenu();
+    });
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    document.querySelectorAll('.menu-item').forEach(a => {
+      a.addEventListener('click', () => closeMenu());
+    });
+  </script>
+
+</body>
+</html>
